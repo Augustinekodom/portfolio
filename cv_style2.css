@@ -1,0 +1,165 @@
+html, body {
+    margin: 0;
+}
+html {
+    font-family: "helvetica neue", sans-serif;
+}
+
+.container{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+}
+/*
+#main-cv{
+    border: 3px solid #fff;
+    padding: 20px;
+    background-color: azure;
+}
+.cv-child{
+    background-color: bisque;
+    width: 50%;
+    float: left;
+    padding: 20px;
+    border: 2px solid black;
+}
+*/
+#profile{
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-template-areas: "grid-child-purple grid-child-green grid-child-green";
+}
+.grid-child-green{
+    grid-area: grid-child-green;
+    background-color: rgb(255, 254, 217);
+    height: 100%;
+    padding: 10px;
+}
+
+.grid-child-purple{
+    grid-area:grid-child-purple;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    height: 100%;
+}
+
+@media only screen and (max-width: 800px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        grid-template-areas: "grid-child-purple grid-child-purple grid-child-purple"
+        "grid-child-green grid-child-green grid-child-green";
+    }
+    .grid-child-purple{
+        text-align: center;
+    }
+}
+
+header{
+    padding: 1px;
+    background-color:#fcd703;
+    color: black;
+    grid-area: header;
+
+
+  
+}
+
+.nav {
+    border-bottom: 1px solid grey;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    background-color: black;
+    grid-area: nav;
+    z-index: 99;
+    
+}
+.menu {
+    margin: 0 30px 0 0;
+    color: white;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    line-height: 70px;
+    background-color: black;
+}
+
+.menu :hover{
+    color: #fcd703;
+}
+
+label {
+    margin: 0 39px 0 0;
+    font-size: 22px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: white;
+}
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid white;
+        margin: 0;
+     
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    .container2 h1{
+        font-size: 20px;
+        letter-spacing: 0.3em;
+        margin: 0;
+    }
+
+
+    
+    
+}
+
+footer{
+    background-color: black;
+    color: white;
+    grid-area: footer;
+    
+}
+
+
+
+
+
+
+
+
+
+
