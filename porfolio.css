@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+}
+html {
+    font-family: "helvetica neue", sans-serif;
+}
+
+header{
+    padding: 1px;
+    background-color:#fcd703;
+    color: black;
+    grid-area: header;
+
+}
+
+.nav {
+    border-bottom: 1px solid grey;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    background-color: black;
+    grid-area: nav;
+    z-index: 99;
+    
+}
+.menu {
+    margin: 0 30px 0 0;
+    color: white;
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    line-height: 70px;
+    background-color: black;
+}
+
+.menu :hover{
+    color: #fcd703;
+}
+
+label {
+    margin: 0 39px 0 0;
+    font-size: 22px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: white;
+}
+#toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid white;
+        margin: 0;
+     
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    .container2 h1{
+        font-size: 20px;
+        letter-spacing: 0.3em;
+        margin: 0;
+    }
+ 
+    
+}
+
+footer{
+    background-color: black;
+    color: white;
+    grid-area: footer;
+    
+}
+
+.p_container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 254, 217);
+    justify-content: center;
+}
+
+.p_container > div{
+    background-color: black;
+    width: 460px;
+    height: 460px;
+    margin: 8px;
+    line-height: 70px;
+    text-align: center;
+    color: white;
+    transition: transform .2s;
+}
+
+.p_container > div:hover{
+    -ms-transform: scale(.96); /* IE */
+  -webkit-transform: scale(.96); /* Safari */
+  transform: scale(.96);
+}
+
+.p-text{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
